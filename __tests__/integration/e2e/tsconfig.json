@@ -1,0 +1,15 @@
+{
+  "extends": "../../../tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    "isolatedModules": false,
+    "types": [
+      "cypress",
+      "@testing-library/cypress"
+    ]
+  },
+  "include": [
+    "../../../node_modules/cypress",
+    "./**/*.ts"
+  ]
+}
