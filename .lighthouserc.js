@@ -14,7 +14,7 @@ module.exports = {
       },
     },
     collect: {
-      url: process.env.BASE_URL,
+      url: 'http://localhost:3000',
       numberOfRuns: 5,
     },
   },

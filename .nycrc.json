@@ -1,0 +1,4 @@
+{
+  "reporter": ["text-summary", "json", "text", "html", "cobertura"],
+  "report-dir": "cypress-coverage"
+}

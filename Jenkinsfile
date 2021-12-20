@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent { docker { image 'cypress/base:latest' } }
 
     stages {
         stage('build') {
             steps {
-                sh 'npm install'
+                sh 'npm ci'
                 sh 'npm run build'
             }
         }

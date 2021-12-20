@@ -8,7 +8,11 @@ module.exports = {
   },
   clearMocks: true,
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**', '<rootDir>/pages/**'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**',
+    '<rootDir>/pages/**',
+    '!<rootDir>/pages/_app.tsx',
+  ],
   coverageThreshold: {
     global: {
       branches: 80,
@@ -16,14 +20,14 @@ module.exports = {
       lines: 80,
     },
   },
-  coverageDirectory: 'coverage',
+  coverageDirectory: 'jest-coverage',
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/server/',
     '<rootDir>/__tests__/integration/',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  coverageReporters: ['json', 'text', 'lcov', 'clover', 'html', 'cobertura'],
+  coverageReporters: ['text-summary', 'json', 'text', 'html', 'cobertura'],
   moduleNameMapper: {
     /* Handle CSS imports (with CSS modules)
     https://jestjs.io/docs/webpack#mocking-css-modules */

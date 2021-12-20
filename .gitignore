@@ -7,7 +7,9 @@
 
 # testing
 /coverage
-**/e2e/videos
+/cypress-coverage
+/jest-coverage
+/.nyc_output
 
 # next.js
 /.next/
@@ -36,3 +38,5 @@ yarn-error.log*
 
 # Lighthouse
 .lighthouseci
+
+/__tests__/**/e2e/videos

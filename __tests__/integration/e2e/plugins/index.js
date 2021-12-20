@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+const browserify = require('@cypress/browserify-preprocessor');
 /* eslint-disable no-unused-vars */
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
@@ -13,6 +15,15 @@
 // the project's config changing)
 
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+  require('@cypress/code-coverage/task')(on, config);
+  // tell Cypress to use .babelrc file
+  // and instrument the specs files
+  // only the extra application files will be instrumented
+  // not the spec files themselves
+  const options = browserify.defaultOptions;
+  options.browserifyOptions.transform[1][1].babelrc = true;
+  options.typescript = require.resolve('typescript');
+  on('file:preprocessor', browserify(options));
+
+  return config;
 };

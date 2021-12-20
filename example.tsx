@@ -1,20 +1,8 @@
-import { useCallback, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '@Styles/Home.module.scss';
 
-const Home: NextPage = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [isTitleVisible, setIsTitleVisible] = useState<boolean>(false);
-
-  const onClickOpenFooter = useCallback(() => {
-    setIsVisible(true);
-  }, []);
-
-  const onClickOpenTitle = useCallback(() => {
-    setIsTitleVisible(true);
-  }, []);
-
+const Example: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -24,9 +12,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        {isTitleVisible && (
-          <h1 className={styles.title}>Welcome to Next.js!</h1>
-        )}
+        <h1 className={styles.title}>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -34,17 +22,15 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
-            <button onClick={onClickOpenFooter}>Open Footer</button>
-          </div>
+          </a>
 
-          <div className={styles.card}>
+          <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-            <button onClick={onClickOpenTitle}>Open Title</button>
-          </div>
+          </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
@@ -66,22 +52,20 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      {isVisible && (
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <span className={styles.logo}>
-              <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </span>
-          </a>
-        </footer>
-      )}
+      <footer className={styles.footer}>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <span className={styles.logo}>
+            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+        </a>
+      </footer>
     </div>
   );
 };
 
-export default Home;
+export default Example;
