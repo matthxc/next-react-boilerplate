@@ -1,5 +1,5 @@
 
-# React and Next.js Boilerplate and Starter Kit with TypeScript
+# React Next.js Boilerplate and Starter Kit
 
 This starter kit was built to improve the developer experience by enforcing the latest and best code practices. 
 
