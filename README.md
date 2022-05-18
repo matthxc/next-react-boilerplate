@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React and Next.js Boilerplate and Starter Kit with TypeScript
 
-## Getting Started
+Clone this project and use it to create your own Next.js project
 
-First, run the development server:
+What is included?
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Next.js](https://nextjs.org/docs/getting-started) for Static-site generation and Server-side rendering
+- Type checking using [TypeScript](https://www.typescriptlang.org/)
+- Linter using [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) extended from the base [Next.js Eslint Config with Core Web Vitals](https://nextjs.org/docs/basic-features/eslint#core-web-vitals)
+- Code Formatter using [Prettier](https://prettier.io/)
+- [Husky](https://typicode.github.io/husky/#/) for Git Hooks
+- [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
+- Lint git commits using [Commitlint](https://github.com/conventional-changelog/commitlint) following the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/)
+- Unit Testing using [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) with code coverage report
+- E2E Testing using [Cypress](https://www.cypress.io/) with code coverage report
+- Combine E2E and Unit Testing coverage reports for unified coverage reports
+- Bundle Size Test using [size-limit](https://github.com/ai/size-limit). 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Size Limit is a performance budget tool for JavaScript. It checks every commit on CI, calculates the real cost of your JS for end-users and throws an error if the cost exceeds the limit.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Absolute Imports using @ prefix
+- [Webpack Bundle Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- Performance test using [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Requirements
+- Node.js 16.x
+- NPM
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Getting started
+#### Clone the repository
 
-## Learn More
+1. `git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name`
+2. `cd my-project-name`
+3. `npm install`
 
-To learn more about Next.js, take a look at the following resources:
+#### Running locally
+`npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Deploy to production
+You can see the results locally in production mode with:
+1. Build and generate production files inside the .next/ folder: `npm run build`
+2. Run a production-mode server: `npm run start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please follow the [official Next.js guide for Deployment](https://nextjs.org/docs/deployment)
