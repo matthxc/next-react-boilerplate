@@ -38,7 +38,7 @@ It focuses on setting up testing and code tools to help you build high-performan
 ### Getting started
 #### Clone the repository
 
-1. `git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name`
+1. `git clone --depth=1 https://github.com/matthxc/next-react-boilerplate my-project-name`
 2. `cd my-project-name`
 3. `npm install`
 
