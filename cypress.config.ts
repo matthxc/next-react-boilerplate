@@ -15,4 +15,5 @@ export default defineConfig({
     specPattern: '__tests__/integration/e2e/tests/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: '__tests__/integration/e2e/support/index.js',
   },
+  experimentalWebKitSupport: true,
 });

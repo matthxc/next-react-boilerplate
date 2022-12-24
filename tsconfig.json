@@ -37,6 +37,6 @@
     ".babelrc",
     "bundles",
     "coverage",
-    "test/*"
+    "./cypress.config.ts"
   ]
 }
